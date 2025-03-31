@@ -33,7 +33,7 @@ int main(){
                 arr[i-1]++;
                 arr[i]--;
             }
-            else if(i-1>=1 && arr[i+1]==0){
+            else if(i+1<=n && arr[i+1]==0){
                 arr[i+1]++;
                 arr[i]--;
             }
