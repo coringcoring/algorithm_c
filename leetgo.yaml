@@ -1,0 +1,22 @@
+author: coringcoring
+language: en
+code:
+  lang: cpp
+  filename_template: '{{ .Difficulty | lower }}/{{ .Id | padWithZero 4 }}{{ if .SlugIsMeaningful }}.{{ .Slug }}{{ end }}'
+  separate_description_file: true
+  modifiers:
+    - name: removeUselessComments
+  cpp:
+    out_dir: leetcode
+    cxx: g++
+    cxxflags: -O2 -std=c++17
+
+leetcode:
+  site: https://leetcode.com
+  credentials:
+    from:
+      - browser
+    browsers: [chrome]
+
+editor:
+  use: vscode
