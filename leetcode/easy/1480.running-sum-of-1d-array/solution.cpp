@@ -11,7 +11,12 @@ using namespace std;
 class Solution {
 public:
     vector<int> runningSum(vector<int>& nums) {
-        
+        for(int i=1 ; i< nums.size() ; i++){
+			//nums.size() 괄호 붙여야함. 문법 까먹음 이슈. 
+			nums[i]+=nums[i-1];
+		}
+
+		return nums; 
     }
 };
 
